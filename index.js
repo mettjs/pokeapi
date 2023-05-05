@@ -1,4 +1,5 @@
 const pokeContainer = document.querySelector('.poke-container');
+var x = 0;
 
 function fetchPokemon(id) {
   fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
@@ -20,6 +21,7 @@ function generarPokemon(pokemon) {
   spriteContainer.classList.add('img-container');
 
   const sprite = document.createElement("img");
+  sprite.classList.add('center');
   sprite.src = pokemon.sprites.front_default
 
   spriteContainer.appendChild(sprite);
@@ -38,4 +40,4 @@ function generarPokemon(pokemon) {
   pokeContainer.appendChild(card);
 }
 
-fetchPokemons(9);
+fetchPokemons(12);
